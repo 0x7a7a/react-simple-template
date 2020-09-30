@@ -44,6 +44,7 @@
     },
     "scripts": {
         "start": "webpack-dev-server --config webpack.dev.js --open",
-        "build": "webpack --config webpack.pro.js"
+        "build": "webpack --config webpack.pro.js",
+        "lint": "eslint '*/**/*.{js,ts,tsx}' --fix"
     }
 }

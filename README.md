@@ -46,6 +46,15 @@ _VSCode_
     }
     ```
 
+-   保存后自动用`eslint`修复问题
+    ```js
+    {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        },
+    }
+    ```
+
 _Webstorm_
 
 -   安装 Postcss 插件
@@ -54,7 +63,9 @@ _Webstorm_
 -   可选:勾选 On Save.会在保存的时候自动执行格式化
 
 ---
+
 ### 目录结构划分和主要文件
+
 ```
 ├── .eslintrc.json
 ├── .gitignore
@@ -94,6 +105,7 @@ _Webstorm_
 -   `utils`会用到的工具类,例如 request、timeformat 等
 
 ### 主要依赖
+
 #### [`postcss`](https://github.com/postcss/postcss)
 
 [precss:](https://github.com/jonathantneal/precss) 主要增加了`precss`作为 sass-like 的预处理,包括变量声明、样式嵌套、继承等功能
@@ -129,3 +141,7 @@ _Webstorm_
     -   [rematch:](https://rematch.gitbook.io) 比 redux 更好用的一个状态管理
 -   Webpack Plugins:
     -   [mini-css-extract-plugin:](https://github.com/webpack-contrib/mini-css-extract-plugin) 提取项目中的 css 到独立的文件
+-   Git 工作流管理(参考了[这里](https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project))
+    -   [commitizen](https://github.com/commitizen-tools/commitizen) 规范 git 提交记录
+    -   [husky](https://github.com/typicode/husky) 更方便的配置 git hook
+    -   [lint-staged](https://github.com/okonet/lint-staged) 在代码提交前运行 lint,防止“坏代码”进入代码库
