@@ -15,6 +15,7 @@
 
 ### 项目主要文件和目录划分
 
+```
 ├── .eslintrc.json
 ├── .gitignore
 ├── .prettierignore
@@ -37,6 +38,7 @@
 ├── tsconfig.json
 ├── webpack.dev.js
 └── yarn.lock
+```
 
 -   `src/index.html`项目入口模版
 -   `src/app.tsx`项目入口文件
