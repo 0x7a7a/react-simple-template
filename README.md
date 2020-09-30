@@ -25,19 +25,21 @@ _VSCode_
 
     ```json
     {
-        "[javascript]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode",
-            "editor.formatOnSave": true
-        },
-        "[javascriptreact]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode",
-            "editor.formatOnSave": true
-        },
         "[typescript]": {
             "editor.defaultFormatter": "esbenp.prettier-vscode",
             "editor.formatOnSave": true
         },
         "[typescriptreact]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+        },
+        // 可选
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+        },
+        // 可选
+        "[javascriptreact]": {
             "editor.defaultFormatter": "esbenp.prettier-vscode",
             "editor.formatOnSave": true
         }
@@ -120,9 +122,11 @@ _Webstorm_
 这里我列一些常用库作为可选项:
 
 -   Http Request:
-    -   [axios]()常用的 http 请求库
-    -   [qs]()配置 axios,用于请求前的参数编码
+    -   [axios:](https://github.com/axios/axios) 常用的 http 请求库
+    -   [qs:](https://github.com/ljharb/qs) 搭配 axios,用于请求前的参数编码
 -   React Router:
-    -   [react-router](https://github.com/ReactTraining/react-router)项目页面路由管理
+    -   [react-router:](https://github.com/ReactTraining/react-router) 项目页面路由管理
+-   状态管理:
+    -   [rematch:](https://rematch.gitbook.io) 比 redux 更好用的一个状态管理
 -   Webpack Plugins:
-    -   [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)提取项目中的 css 到独立的文件
+    -   [mini-css-extract-plugin:](https://github.com/webpack-contrib/mini-css-extract-plugin) 提取项目中的 css 到独立的文件
