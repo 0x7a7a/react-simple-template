@@ -1,23 +1,16 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 resolve = (dir) => path.resolve(__dirname, dir)
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: resolve('./src/app.tsx'),
     output: {
         path: resolve('./dist'),
-        filename: 'bundle.js',
+        filename: '[name].[hash:6].js',
         publicPath: '/'
     },
-    devServer: {
-        historyApiFallback: true,
-        contentBase: resolve('./dist'),
-        compress: false,
-        port: 9000,
-        proxy: {}
-    },
-    devtool: '#source-map',
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
         alias: {
@@ -80,5 +73,9 @@ module.exports = {
             template: path.resolve(__dirname, './src', 'index.html'),
             filename: 'index.html'
         })
-    ]
+    ],
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()]
+    }
 }
