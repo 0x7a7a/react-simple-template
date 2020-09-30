@@ -23,7 +23,7 @@ _VSCode_
 
 -   配置`Prettier`为代码默认格式化工具,打开 VSCode 配置项,其他配置项可以查看插件页面具体介绍
 
-    ```json
+    ```js
     {
         "[typescript]": {
             "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -33,12 +33,12 @@ _VSCode_
             "editor.defaultFormatter": "esbenp.prettier-vscode",
             "editor.formatOnSave": true
         },
-        // 可选
+        //可选
         "[javascript]": {
             "editor.defaultFormatter": "esbenp.prettier-vscode",
             "editor.formatOnSave": true
         },
-        // 可选
+        //可选
         "[javascriptreact]": {
             "editor.defaultFormatter": "esbenp.prettier-vscode",
             "editor.formatOnSave": true
@@ -97,9 +97,9 @@ _Webstorm_
 
 #### [postcss](https://github.com/postcss/postcss)
 
-[precss](https://github.com/jonathantneal/precss)主要增加了`precss`作为 sass-like 的预处理,包括变量声明、样式嵌套、继承等功能
+[precss:](https://github.com/jonathantneal/precss) 主要增加了`precss`作为 sass-like 的预处理,包括变量声明、样式嵌套、继承等功能
 
-[autoprefixer](https://github.com/postcss/autoprefixer)自动增加 css 的浏览器兼容前缀,默认为`default`
+[autoprefixer:](https://github.com/postcss/autoprefixer) 自动增加 css 的浏览器兼容前缀,默认为`default`
 
 #### [prettier](https://github.com/prettier/prettier)
 
@@ -107,11 +107,11 @@ _Webstorm_
 
 #### [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
 
-[eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)react 相关的 lint 规则
+[eslint-plugin-react:](https://github.com/yannickcr/eslint-plugin-react) react 相关的 lint 规则
 
-[eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)解决因格式造成的 prettier 和 eslint 的冲突问题
+[eslint-plugin-prettier:](https://github.com/prettier/eslint-plugin-prettier) 解决因格式造成的 prettier 和 eslint 的冲突问题
 
-[eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)关闭所有不必要的或可能与 prettier 冲突的规则
+[eslint-config-prettier:](https://github.com/prettier/eslint-config-prettier) 关闭所有不必要的或可能与 prettier 冲突的规则
 
 ### 写在最后
 
