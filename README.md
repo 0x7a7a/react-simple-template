@@ -54,7 +54,7 @@ _Webstorm_
 -   可选:勾选 On Save.会在保存的时候自动执行格式化
 
 ---
-
+### 目录结构划分和主要文件
 ```
 ├── .eslintrc.json
 ├── .gitignore
@@ -94,18 +94,17 @@ _Webstorm_
 -   `utils`会用到的工具类,例如 request、timeformat 等
 
 ### 主要依赖
-
-#### [postcss](https://github.com/postcss/postcss)
+#### [`postcss`](https://github.com/postcss/postcss)
 
 [precss:](https://github.com/jonathantneal/precss) 主要增加了`precss`作为 sass-like 的预处理,包括变量声明、样式嵌套、继承等功能
 
 [autoprefixer:](https://github.com/postcss/autoprefixer) 自动增加 css 的浏览器兼容前缀,默认为`default`
 
-#### [prettier](https://github.com/prettier/prettier)
+#### [`prettier`](https://github.com/prettier/prettier)
 
 格式化代码,具体配置见`.prettierrc.js`文件
 
-#### [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+#### [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)
 
 [eslint-plugin-react:](https://github.com/yannickcr/eslint-plugin-react) react 相关的 lint 规则
 
