@@ -142,6 +142,6 @@ _Webstorm_
 -   Webpack Plugins:
     -   [mini-css-extract-plugin:](https://github.com/webpack-contrib/mini-css-extract-plugin) 提取项目中的 css 到独立的文件
 -   Git 工作流管理(参考了[这里](https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project))
-    -   [commitizen](https://github.com/commitizen-tools/commitizen) 规范 git 提交记录
-    -   [husky](https://github.com/typicode/husky) 更方便的配置 git hook
-    -   [lint-staged](https://github.com/okonet/lint-staged) 在代码提交前运行 lint,防止“坏代码”进入代码库
+    -   [commitizen:](https://github.com/commitizen-tools/commitizen) 规范 git 提交记录
+    -   [husky:](https://github.com/typicode/husky) 更方便的配置 git hook
+    -   [lint-staged:](https://github.com/okonet/lint-staged) 在代码提交前运行 lint,防止“坏代码”进入代码库
