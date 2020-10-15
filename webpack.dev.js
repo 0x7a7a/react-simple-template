@@ -14,6 +14,7 @@ module.exports = {
         historyApiFallback: true,
         contentBase: resolve('./dist'),
         compress: false,
+        overlay:{errors:true},
         port: 9000,
         proxy: {}
     },
