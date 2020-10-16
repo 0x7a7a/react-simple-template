@@ -8,7 +8,7 @@ module.exports = {
     entry: resolve('./src/app.tsx'),
     output: {
         path: resolve('./dist'),
-        filename: '[name].[hash:6].js',
+        filename: '[name].[fullhash:6].js',
         publicPath: '/'
     },
     resolve: {

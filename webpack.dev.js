@@ -14,11 +14,11 @@ module.exports = {
         historyApiFallback: true,
         contentBase: resolve('./dist'),
         compress: false,
-        overlay:{errors:true},
+        overlay: { errors: true },
         port: 9000,
         proxy: {}
     },
-    devtool: '#source-map',
+    devtool: 'source-map',
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
         alias: {
