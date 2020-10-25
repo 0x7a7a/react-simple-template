@@ -24,10 +24,5 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         'react/display-name': 'off'
     },
-    ignorePatterns: [
-        'node_modules',
-        'postcss.config.js',
-        'webpack.dev.js',
-        'webpack.pro.js'
-    ]
+    ignorePatterns: ['node_modules', 'postcss.config.js', 'webpack.js']
 }

@@ -1,24 +1,16 @@
 const path = require('path')
+const TerserPlugin = require('terser-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 resolve = (dir) => path.resolve(__dirname, dir)
 
-module.exports = {
-    mode: 'development',
+let config = {
     entry: resolve('./src/app.tsx'),
     output: {
         path: resolve('./dist'),
-        filename: 'bundle.js',
+        filename: '[name].[chunkhash].js',
         publicPath: '/'
     },
-    devServer: {
-        historyApiFallback: true,
-        contentBase: resolve('./dist'),
-        compress: false,
-        overlay: { errors: true },
-        port: 9000,
-        proxy: {}
-    },
-    devtool: 'source-map',
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
         alias: {
@@ -78,4 +70,27 @@ module.exports = {
             filename: 'index.html'
         })
     ]
+}
+
+module.exports = (env, argv) => {
+    if (argv.mode === 'development') {
+        config.devtool = 'source-map'
+        config.devServer = {
+            historyApiFallback: true,
+            contentBase: resolve('./dist'),
+            overlay: { errors: true },
+            compress: false,
+            port: 9000,
+            proxy: {}
+        }
+    }
+    if (argv.mode === 'production') {
+        config.optimization = {
+            minimize: true,
+            minimizer: [new TerserPlugin()]
+        }
+        config.plugins = [...config.plugins, new CleanWebpackPlugin()]
+    }
+
+    return config
 }
