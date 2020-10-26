@@ -2,6 +2,11 @@
 
 > 一个简单的 React+TypeScript+Webpack 的前端脚手架.
 
+### 分支说明
+- master:保证当前分支开发、编译无误,可直接使用.
+- next:所有依赖为最新版本,有不稳定性和隐藏的不兼容问题,作为测试和探索使用.
+
+
 ### 安装
 
 1.  `git clone https://github.com/zzzzzlucky/react-simple-template`
