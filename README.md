@@ -2,6 +2,11 @@
 
 > 一个简单的 React+TypeScript+Webpack 的前端脚手架.
 
+### 分支说明
+
+-   master:保证当前分支纯净、开发编译无误,可直接使用
+-   antd:增加了[ant-design](https://ant.design/index-cn)框架和相关配置
+
 ### 安装
 
 1.  `git clone https://github.com/zzzzzlucky/react-simple-template`
@@ -18,12 +23,12 @@
 ### 开发环境配置
 
 _VSCode_
-- 安装必要插件:
-     - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) 格式化代码
-    - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) 检查TypeScript代码规范
-    - [StyleLint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) 检查css文件规范
-	- [Postcss](https://marketplace.visualstudio.com/items?itemName=cpylua.language-postcss) postcss语法支持
-    
+
+-   安装必要插件:
+    -   [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) 格式化代码
+    -   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) 检查 TypeScript 代码规范
+    -   [StyleLint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) 检查 css 文件规范
+    -   [Postcss](https://marketplace.visualstudio.com/items?itemName=cpylua.language-postcss) postcss 语法支持
 -   配置`Prettier`为代码默认格式化工具,打开 VSCode 配置项,其他配置项可以查看插件页面具体介绍
 
     ```js
@@ -50,6 +55,7 @@ _VSCode_
     ```
 
 -   保存后自动用`eslint`修复问题
+
     ```js
     {
         "editor.codeActionsOnSave": {
@@ -58,22 +64,20 @@ _VSCode_
     }
     ```
 
-- 可选:使用postcss插件高亮css文件
+-   可选:使用 postcss 插件高亮 css 文件
 
-     ```js
-     "files.associations": {
-         "*.css": "postcss"
-     }
-     ```
-
-     
+    ```js
+    "files.associations": {
+        "*.css": "postcss"
+    }
+    ```
 
 _Webstorm_
 
 -   安装 Postcss 插件
     -   `Preferences | Languages & Frameworks | Style Sheets | Dialects| Project CSS Dialect`设置为`POSTCSS`,否则 css 文件如果用到了变量、嵌套等语法会报错.
--   配置prettier
-    -   `Preferences | Languages & Frameworks | JavaScript | Prettier`检查node执行文件路径和prettier安装路径(正常应该在项目下的node_modules/prettier中)
+-   配置 prettier
+    -   `Preferences | Languages & Frameworks | JavaScript | Prettier`检查 node 执行文件路径和 prettier 安装路径(正常应该在项目下的 node_modules/prettier 中)
     -   `Run for files`配置增加缺少的文件类型,可改为`{**/*,*}.{js,ts,jsx,tsx,css,scss,sass,less,json}`
     -   可选:勾选 On Save.会在保存的时候自动执行格式化
 
