@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 resolve = (dir) => path.resolve(__dirname, dir)
 
-let config = {
+const config = {
     entry: resolve('./src/app.tsx'),
     output: {
         path: resolve('./dist'),
@@ -31,7 +31,16 @@ let config = {
                                 '@babel/preset-react',
                                 '@babel/preset-typescript'
                             ],
-                            plugins: ['@babel/plugin-transform-runtime']
+                            plugins: [
+                                '@babel/plugin-transform-runtime',
+                                [
+                                    'import',
+                                    {
+                                        libraryName: 'antd',
+                                        style: 'css'
+                                    }
+                                ]
+                            ]
                         }
                     }
                 ]
@@ -80,7 +89,7 @@ module.exports = (env, argv) => {
             contentBase: resolve('./dist'),
             overlay: { errors: true },
             compress: false,
-            port: 9000,
+            port: 9001,
             proxy: {}
         }
     }
