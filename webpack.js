@@ -31,16 +31,7 @@ const config = {
                                 '@babel/preset-react',
                                 '@babel/preset-typescript'
                             ],
-                            plugins: [
-                                '@babel/plugin-transform-runtime',
-                                [
-                                    'import',
-                                    {
-                                        libraryName: 'antd',
-                                        style: 'css'
-                                    }
-                                ]
-                            ]
+                            plugins: ['@babel/plugin-transform-runtime']
                         }
                     }
                 ]
