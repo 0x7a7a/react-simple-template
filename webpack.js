@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 resolve = (dir) => path.resolve(__dirname, dir)
 
 const config = {
+    target: 'web',
     entry: resolve('./src/app.tsx'),
     output: {
         path: resolve('./dist'),
