@@ -47,7 +47,7 @@ const config = {
                 ]
             },
             {
-                test: /\.css$/,
+                test: /\.p?css$/,
                 exclude: /node_modules/,
                 use: [
                     'style-loader',
@@ -55,7 +55,9 @@ const config = {
                         loader: 'css-loader',
                         options: {
                             modules: {
-                                localIdentName: '[path][name]-[local]'
+                                localIdentName: '[path][name]-[local]',
+                                //使用驼峰模式
+                                exportLocalsConvention: 'camelCaseOnly'
                             },
                             importLoaders: 2
                         }
